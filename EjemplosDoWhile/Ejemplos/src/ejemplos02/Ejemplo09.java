@@ -35,13 +35,21 @@ public class Ejemplo09 {
         cadenaFinal = "Listado de Notas\n";
         
         do {
+            System.out.println("Ingrese las calificaciones, de tipo entero");
+            nota = entrada.nextInt();
             
-            
+            System.out.println("Ingrese el nombre del estudiante");
+            entrada.nextLine();
+            nombre = entrada.nextLine();
             // agrego valor al acumulador
             suma = suma + nota;
             // agrego una unidad al contador para luego sacar el promedio
             contador_calificaciones = contador_calificaciones + 1;
             
+            cadenaFinal = String.format("%sCalificacion %d del estudiante %s\n",
+                    cadenaFinal,
+                    nota,
+                    nombre.toLowerCase());
             
             System.out.println("Ingrese (-111) si desea salir del ciclo; "
                     + "cualquier otro número para continuar");
